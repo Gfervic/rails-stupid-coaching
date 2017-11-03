@@ -5,8 +5,6 @@ class QuestionsController < ApplicationController
 
   def answer
   @question = params[:query]
-
-  # coach_answer()
-
+  @answer = coach_answer(@question)
   end
 end
