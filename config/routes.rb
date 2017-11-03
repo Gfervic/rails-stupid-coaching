@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
 
-  get 'answer', to: 'questions#answer'
+  get 'about', to: 'pages#about'
 
-  get 'ask', to: 'questions#ask'
+  get 'contact', to: 'pages#contact'
+
+  # get '/', to: 'pages#home'
+  root 'pages#home'
+
+  get 'restaurants', to: 'restaurants#index'
+
+  post 'restaurants', to: 'restaurants#create'
+
+  get 'restaurants/:id', to: 'restaurants#show'
+
+
+  # get 'answer', to: 'questions#answer'
+
+  # get 'ask', to: 'questions#ask'
 
 end
