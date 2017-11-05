@@ -1,13 +1,20 @@
 class QuestionsController < ApplicationController
-
+  def home
+  end
 
   def ask
-    puts "I am responding to the GET /questions/ask"
-
   end
 
   def answer
     @question = params[:query]
-    @answer = coach_answer(@question)
+    if @question.blank?
+      @answer = "I can't hear you!"
+    elsif @question =~ /i am going to work/i
+      @answer = "Great!"
+    elsif @question.end_with?("?")
+      @answer = "Silly question, get dressed and go to work!"
+    else
+      @answer = "I don't care, get dressed and go to work!"
+    end
   end
 end
