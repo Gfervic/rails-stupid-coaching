@@ -8,16 +8,25 @@ body {
   font-family: Roboto;
   font-weight: 300;
   padding: 0 24px;
+  text-align: center;
 }
 
 h2 {
+  margin-top: 1em;
   font-weight: 400;
+  margin-bottom: 0.8em;
+}
+
+p {
+  margin-bottom: 2em;
 }
 
 blockquote {
   border-left: 6px solid #ddd;
   margin: 1.5em 0;
   padding: 0.5em 1em;
+  width: 500px;
+  margin: 30px  auto;
 
   &.coach {
     background-color: lightyellow;
@@ -29,6 +38,4 @@ cite:before {
   content: "- "
 }
 
-.input-group-btn {
-  padding:25px;
-}
+
